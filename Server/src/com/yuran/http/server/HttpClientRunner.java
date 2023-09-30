@@ -24,6 +24,5 @@ public static void main(String[] args) throws IOException, InterruptedException,
 //	System.out.println(response.headers());
 //	System.out.println(response.body());
 	System.out.println(response3.get().body());
-	
 }
 }
