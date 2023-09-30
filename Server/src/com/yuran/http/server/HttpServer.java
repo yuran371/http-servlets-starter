@@ -12,9 +12,11 @@ import java.util.concurrent.Executors;
 import java.util.logging.Handler;
 
 public class HttpServer {
+	
 	private final ExecutorService pool;
 	private final int port;
 	private boolean stopped;
+	
 	public HttpServer(int port, int poolsize) {
 		this.port = port;
 		this.pool = Executors.newFixedThreadPool(poolsize);
