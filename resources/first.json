@@ -3,7 +3,7 @@
 	"startRow": {
 		"method": "GET",
 		"url": "www.google.com",
-		"version": 1.1	
+		"version": 1.1
 	},
 	"headers": [
 		{
@@ -12,7 +12,7 @@
 		},
 		{
 			"name": "accept",
-			"value": "application/json"	
+			"value": "application/json"
 		}
 	],
 	"body": {
