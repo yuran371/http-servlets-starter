@@ -1,6 +1,7 @@
 package com.yuran.http.client;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -16,7 +17,7 @@ public class UrlExample {
 		URL url = new URL ("https://www.google.com");
 		URLConnection urlConnection = url.openConnection();
 		System.out.println();
-		try (var outputStream = urlConnection.getOutputStream()) {
+		try (OutputStream outputStream = urlConnection.getOutputStream()) {
 			
 		}
 	}
