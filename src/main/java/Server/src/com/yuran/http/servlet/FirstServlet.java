@@ -1,10 +1,12 @@
 package com.yuran.http.servlet;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.Map;
+import java.util.stream.Stream;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.ServletConfig;
@@ -34,6 +36,14 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 		writer.write("<h1>Привет с певрого сервлета!</h2>");
 	}
 }
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try (BufferedReader reader = req.getReader();
+				Stream<String> lines = reader.lines()) {
+			lines.forEach(System.out::println);
+		}		
+	}
 	
 	@Override
 	public void destroy() {
